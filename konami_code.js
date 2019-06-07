@@ -22,6 +22,7 @@ function onKeyDownHandler(e){
     index++;
 
     if (index === codes.length){
+      setEqualTo('True')
       window.alert("Hurray!");
       index = 0;
     }
