@@ -10,44 +10,21 @@ const codes = [
   "b",
   "a"
 ];
-let i = 0
+function init() {
+  // your code here	  let index = 0;
+  const input = document.body;
 
- function init() {	function init() {
-  // your code here	  // your code here
-  //const input = document.querySelector('input');
- /*
-  document.addEventListener('keydown', function(e) {
-    console.log(e.key);
-  });
-*/
-//document.addEventListener('keydown', onKeyDownHandler(e))
-  document.body.addEventListener('keydown', function(e) {
-    i++
-    console.log(i)
+   input.addEventListener(`keydown`, function(e) {
+    if (e.key === codes[index]) {
+      index++;
 
-     console.log(e.key)
-    onKeyDownHandler(e);
-  });
+       if (index === codes.length) {
+        alert("Congratulations!");
 
- }
-
- // Keep track of index outside of the event handler.
-let index = 0;
-
- // This is the function that would be invoked by the event listener.
-function onKeyDownHandler(e) {
-  const key = e.key;
-
-   if (key === codes[index]) {
-    index++;
-    console.log(index)
-
-     if (index === codes.length) {
-      alert("Hurray!");
-
-       index = 0;
+         index = 0;
+      }
+    } else {
+        index = 0;
     }
-  } else {
-    index = 0;
-  }
+  });
 }	}
