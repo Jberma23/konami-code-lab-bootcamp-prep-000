@@ -10,7 +10,7 @@ const codes = [
   "b",
   "a"
 ];
-function init(){
+
 let index = 0;
 
   document.body.addEventListener('keydown', onKeyDownHandler)
@@ -27,4 +27,4 @@ function onKeyDownHandler(e){
   } else {
     index = 0;
   }
-}
+init();
