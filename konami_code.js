@@ -10,10 +10,10 @@ const codes = [
   "b",
   "a"
 ];
-function init(){
-let index = 0;
 
-  const input = document.body
+function init() {
+let index = 0;
+const input = document.body;
 input.addEventListener(`keydown`, function(e) {
   if (e.key === codes[index]){
     index++;
