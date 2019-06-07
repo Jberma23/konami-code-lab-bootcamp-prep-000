@@ -17,7 +17,8 @@ let index = 0;
 
 function onKeyDownHandler(e){
   const key = e.key;
-
+  for (let i = 0, l = codes.length; i < l; i++) {
+    triggerKeyDown(codes[i]);
   if (key === codes[index]){
     index++;
 
