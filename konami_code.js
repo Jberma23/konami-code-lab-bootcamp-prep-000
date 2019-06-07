@@ -22,6 +22,9 @@ function onKeyDownHandler(e){
     index++;
 
     if (index === codes.length){
+      for (let i = 0, l = codes.length; i < l; i++) {
+        triggerKeyDown(codes[i]);
+      }
       window.alert("Hurray!");
       index = 0;
     }
