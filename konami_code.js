@@ -11,22 +11,21 @@ const codes = [
   "a"
 ];
 function init(){
-  var page = document.body;
-  var keysPressed = [];
-  page.addEventListener('keydown', function(event) {
-    keysPressed.push(event.key);
-    (keysPressed[0] === codes[0]) ? compare(keysPressed) : keysPressed.shift();
-  })
-}
+let index = 0;
 
- function compare(array) {
-  var result;
-  if (array.length === codes.length) {
-    for (var i = 0; i < codes.length;) {
-      array[i] === codes[i]
-      i++
+  document.body.addEventListener('keydown', (e) =>{
+
+function onKeyDownHandler(e){
+  const key = e.key;
+
+  if (key === codes[index]){
+    index++;
+
+    if (index === codes.length){
+      window.alert("Hurray!");
+      index = 0;
     }
-    alert('Congrats!')
+  } else {
+    index = 0;
   }
-
 }
