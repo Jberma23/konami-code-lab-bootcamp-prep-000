@@ -10,21 +10,23 @@ const codes = [
   "b",
   "a"
 ];
-function init() {
-  // your code here	  let index = 0;
-  const input = document.body;
+function init(){
+let index = 0;
 
-   input.addEventListener(`keydown`, function(e) {
-    if (e.key === codes[index]) {
-      index++;
+  document.body.addEventListener('keydown', onKeyDownHandler(e))
 
-       if (index === codes.length) {
-        alert("Congratulations!");
+function onKeyDownHandler(e){
+  const key = e.key;
 
-         index = 0;
-      }
-    } else {
-        index = 0;
+  if (key === codes[index]){
+    index++;
+
+    if (index === codes.length){
+      alert("Hurray!");
+      index = 0;
     }
-  });
-}	}
+  } else {
+    index = 0;
+  }
+}
+}
